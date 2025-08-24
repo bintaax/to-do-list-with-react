@@ -1,7 +1,5 @@
 import { Trash } from "lucide-react";
 
-
-
 type Priority = "Urgente" | "Moyenne" | "Basse";
 
 type toDo = {
@@ -37,6 +35,5 @@ const todoItem = ({todo, onDelete, isSelected, onToggleSelect} : Props) => {
         </li>
     )
 }
-
 
 export default todoItem
