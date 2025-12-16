@@ -102,19 +102,38 @@ function App() {
         <button onClick={addTodo} className="btn btn-primary">Ajouter</button>
     
       </div>
-      <div className="space-y-2 flex-1 h-fit" >
-        <div className="flex items-center justify-between">        
-          <div className="flex flex-wrap gap-4">
-          <button className={`btn btn-soft ${filter === "Tous" ? "btn-accent" : ""}`} onClick={() => setFilter("Tous")}>Tous ({totalCount})</button>
+      <div className="space-y-2 flex-1 h-fit">
+  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">        
+    
+    <div className="flex flex-wrap gap-2 md:gap-4">
+      <button className={`btn btn-soft ${filter === "Tous" ? "btn-accent" : ""}`} onClick={() => setFilter("Tous")}>
+        Tous ({totalCount})
+      </button>
 
-          <button className={`btn btn-soft ${filter === "Tous" ? "btn-accent" : ""}`} onClick={() => setFilter("Urgente")}>Urgente ({urgentCount})</button>
+      <button className={`btn btn-soft ${filter === "Urgente" ? "btn-accent" : ""}`} onClick={() => setFilter("Urgente")}>
+        Urgente ({urgentCount})
+      </button>
 
-            <button className={`btn btn-soft ${filter === "Tous" ? "btn-accent" : ""}`} onClick={() => setFilter("Moyenne")}>Moyenne ({mediumCount})</button>
+      <button className={`btn btn-soft ${filter === "Moyenne" ? "btn-accent" : ""}`} onClick={() => setFilter("Moyenne")}>
+        Moyenne ({mediumCount})
+      </button>
 
-              <button className={`btn btn-soft ${filter === "Tous" ? "btn-accent" : ""}`} onClick={() => setFilter("Basse")}>Basse ({lowCount})</button>
-        </div>
-             <button onClick={finishSelected} className="btn  hover:bg-gray-100" disabled={selectedTodos.size == 0}>Finir la sélection ({selectedTodos.size})</button>
-             </div>
+      <button className={`btn btn-soft ${filter === "Basse" ? "btn-accent" : ""}`} onClick={() => setFilter("Basse")}>
+        Basse ({lowCount})
+      </button>
+    </div>
+
+    <button
+      onClick={finishSelected}
+      className="btn hover:bg-gray-100 w-full md:w-auto"
+      disabled={selectedTodos.size == 0}
+    >
+      Finir la sélection ({selectedTodos.size})
+    </button>
+
+  </div>
+</div>
+
 
 
 
@@ -140,7 +159,6 @@ function App() {
       </div>
       
       </div>     
-   </div>
   )
 }
 
