@@ -113,7 +113,7 @@ function App() {
 
               <button className={`btn btn-soft ${filter === "Tous" ? "btn-accent" : ""}`} onClick={() => setFilter("Basse")}>Basse ({lowCount})</button>
         </div>
-             <button onClick={finishSelected} className="btn bg-neutral" disabled={selectedTodos.size == 0}>Finir la sélection ({selectedTodos.size})</button>
+             <button onClick={finishSelected} className="btn  hover:bg-gray-100" disabled={selectedTodos.size == 0}>Finir la sélection ({selectedTodos.size})</button>
              </div>
 
 
